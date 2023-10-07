@@ -1,0 +1,41 @@
+<!-- Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas. 
+Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let numcarrosvendidos = +prompt("Quantos carros foram vendidos?"); //numeros de carros vendidos
+        console.log("total de carros vendidos: " + numcarrosvendidos + " carros");
+
+        let comissaocarrosvendidos =numcarrosvendidos * 100; //variavel para calculo da comissao por cada carro vendido
+        console.log("a comissao total por carro vendido e de: " + comissaocarrosvendidos + " R$");
+
+        let valorvendido = +prompt("Qual o valor total de vendas?"); //variavel valor total das vendas
+        console.log("o valor total das vendas foi de: " + valorvendido + " R$");
+
+        let comissaovalortotal = valorvendido * 5 / 100; //variavel para calculo da comissao valor dos carros vendidos
+        console.log("a comissao do vendedor e de: " + comissaovalortotal + " R$");
+
+        const salariofixo = 1000; // variavel para indicar o salario fixo do vendedor 
+        console.log("o salario fixo do vendedor e de: " +salariofixo + " R$");
+
+        let salariototalvendedor = salariofixo + comissaovalortotal + comissaocarrosvendidos; //variavel para calculo do salario total do vendedor com todas as comissoes
+        console.log("o salario total do vendedor e de: " + salariototalvendedor + " R$");
+
+
+alert("o salario total do vendedor e de: " + salariototalvendedor + " R$");
+
+        
+    </script>
+    
+</body>
+</html>

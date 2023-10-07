@@ -1,0 +1,58 @@
+<!-- Escrever um algoritmo que lê cinco números inteiros, um de cada vez, armazena os números lidos em um vetor e a partir da leitura do vetor imprime qual é o maior e o menor dos números lidos e também a soma dos números lidos. -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const numeros =[] //criei um array vazio para poder armazenar os numeros digitados pelo usuario
+
+        for (let i = 0; i<5; i++){ //criei um for para fazer o armazenamento dos numeros que serao digitados
+            numeros[i] = parseInt(prompt("digite o numero desejado"))
+           
+        }
+        
+    console.log(numeros) // console.table(numeros) criado aparenas para mostrar os numeros digitados pelo usuario
+
+
+    // criando uma variavel para armazenar o maior e o menor numero e realizar a soma dos mesmos
+    let maiornumero = numeros[0]
+    let menornumero = numeros[0]
+    let soma = 0
+
+    // criando um for para realizar a soma dos numeros
+    for (let i = 0; i<5; i++){
+        soma = numeros[i] + soma
+
+
+        if (numeros[i] > maiornumero){ //criando uma variavel para armazenar o maior numero
+            maiornumero = numeros[i]
+        }
+
+
+        if (numeros[i] < menornumero){ //criando uma variavel para armazenar o menor numero
+            menornumero = numeros[i]
+        }
+    }
+    //criando consoles para mostrar os resultados
+    console.log("o maior numero e " + maiornumero)
+    console.log("o menor numero e " + menornumero)
+    console.log("soma dos numeros e " + soma)
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

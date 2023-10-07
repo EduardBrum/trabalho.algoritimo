@@ -1,0 +1,58 @@
+<!-- Escrever um algoritmo que lê a quantidade informada de pessoas que não estão sendo monitoradas no posto de saúde. 
+Para cada pessoa é anotada o peso e a altura (em metros), que é fornecida pelo usuário, sendo que o peso igual a zero informa o final da leitura. Calcule e escreva:  -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//criando variaveias
+let maiorAltura = 0;
+let menorAltura = Infinity;
+let somaPesos = 0;
+let contadorPessoas = 0;
+
+while (true) {  
+  let peso = parseFloat(prompt("Digite o peso da pessoa (ou aperte 0 para encerrar):"));//variavel para armazenar o peso da pessoa
+
+  if (peso === 0) { //condicao para se o valor inserido for 0 parar o loop
+    break;
+  }
+
+  let altura = parseFloat(prompt("Digite a altura da pessoa em metros:"));
+
+  if (altura > maiorAltura) { 
+    maiorAltura = altura;
+  }
+
+  if (altura < menorAltura) {
+    menorAltura = altura;
+  }
+
+  somaPesos += peso;
+  contadorPessoas++;
+}
+
+let mediaPesos = somaPesos / contadorPessoas;
+
+console.log("Maior altura informada: " + maiorAltura);
+alert("Maior altura informada: " + maiorAltura + " metros");
+
+console.log("Menor altura informada: " + menorAltura);
+alert("Menor altura informada: " + menorAltura + " metros");
+
+console.log("Média dos pesos informados: " + mediaPesos.toFixed(2) + " kg");
+alert("Média dos pesos informados: " + mediaPesos.toFixed(2) + " kg");
+
+ 
+        
+    </script>
+    
+</body>
+</html>

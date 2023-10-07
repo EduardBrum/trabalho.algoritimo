@@ -1,0 +1,74 @@
+<!-- Escrever um algoritmo que lê uma quantidade informada inicialmente de notas de alunos da disciplina de Lógica. 
+Para cada aluno são lidas quatro (4) notas variando de zero (0) a dez (10). Para ser aprovado o aluno necessita de média igual ou superior a seis (6). 
+Ler as notas, calcular a média e armazenar em uma matriz (Vetor bidimensional). Considere o índice da linha da matriz como o núm
+ero do aluno na chamada. Após o cálculo da média, ler os dados e escrever: “O Aluno y foi Aprovado (ou Reprovado) com média x,xx”. No final informar: 
+
+*quantos alunos foram aprovados, 
+*quantos alunos foram reprovados, 
+*qual a porcentagem de alunos aprovados. -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+let quantidadeAlunos = parseInt(prompt("Digite a quantidade de alunos:")); //pegando a quantidade de alunos
+
+//criando variaveis
+let notas = [];
+let aprovados = 0;
+let reprovados = 0;
+
+
+for (let i = 0; i < quantidadeAlunos; i++) { 
+    let aluno = i + 1;
+    let somaNotas = 0;
+
+
+    for (let j = 0; j < 4; j++) { 
+        let nota = parseFloat(prompt("Digite a nota de 0 a 10 do aluno " + (j + 1) + "nota do aluno " + aluno + ":"));
+        if (nota < 0 || nota > 10) {
+            alert("Nota inválida digite uma nota entre 0 e 10");
+            j--;
+        }
+        somaNotas += nota;
+    }
+
+
+    let media = somaNotas / 4; //armazenando as notas para fazer media
+    notas.push([aluno, media]);
+
+
+    if (media >= 6) { //condicao para se a media for maior ou igual a 6
+        aprovados++;
+        console.log("O Aluno " + aluno + " foi Aprovado com média " + media.toFixed(2));
+    } else { //condicao para se a media for menor que 6
+        reprovados++;
+        console.log("O Aluno " + aluno + " foi Reprovado com média " + media.toFixed(2));
+    }
+}
+
+
+let porcentagemAprovados = (aprovados / quantidadeAlunos) * 100; //calculando a porcentagem de alunos aprovados
+
+//exibindo os resultados
+console.log("Quantidade de alunos aprovados: " + aprovados);
+alert("Quantidade de alunos aprovados: " + aprovados);
+console.log("Quantidade de alunos reprovados: " + reprovados);
+alert("Quantidade de alunos reprovados: " + reprovados);
+console.log("Porcentagem de alunos aprovados: " + porcentagemAprovados.toFixed(2) + "%");
+alert("Porcentagem de alunos aprovados: " + porcentagemAprovados.toFixed(2) + "%");
+
+        
+    </script>
+    
+</body>
+</html>

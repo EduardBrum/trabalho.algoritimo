@@ -1,0 +1,47 @@
+<!-- A Secretaria de Meio Ambiente que controla o índice de poluição mantém 3 grupos de indústrias que são altamente poluentes do meio ambiente. 
+O índice de poluição aceitável varia de 0,05 até 0,25. Se o índice sobe para 0,3 as indústrias do 1º grupo são intimadas a suspenderem suas atividades, se o índice crescer para 0,4 as industrias do 1º e 2º grupo são intimadas a suspenderem suas atividades, se o índice atingir 0,5 todos os grupos devem ser notificados a paralisarem suas atividades. 
+Escreva um algoritmo que solicite ao usuário que informe o índice de poluição medido e emita a notificação adequada aos diferentes grupos de empresas.   -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let indicepoluicao = +prompt("digite o indice de poluicao:"); //variavel para armazenar o indice de poluicao
+
+        if (indicepoluicao >= 0.5) { //condicao para se o indice de poluicao for maior ou igual a 0.5
+            alert("Indice de poluicao acima do permitido todos os grupos de industria devem suspender suas atividades");
+        }
+
+        else if (indicepoluicao >= 0.4) { //condicao para se o indice de poluicao for maior ou igual a 0.4
+            alert("alerta o primeiro e o segundo grupo de industria devem suspender suas atividades");
+        }
+
+        else if (indicepoluicao >= 0.3) { //condicao para se o indice de poluicao for maior ou igual a 0.3
+            alert("alerta o primeiro grupo de industria devem suspender suas atividades");
+        }
+        
+        else if (indicepoluicao >= 0.05  && indicepoluicao <= 0.25) { //condicao para se o indice de poluicao for maior ou igual a 0.05 e menor ou igual a 0.25
+            alert("o indice de poluicao esta dentro dos limites aceitaveis todos os grupos de industria podem continuar suas atividades");
+        
+        }
+
+        else {
+            alert("o indice de poluicao inserido nao e valido"); //alerta para se caso o valor inserido for invalido
+        }
+            
+        
+
+
+        
+    </script>
+    
+</body>
+</html>
